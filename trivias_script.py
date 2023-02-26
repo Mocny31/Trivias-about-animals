@@ -22,7 +22,7 @@ if amountOFAnimal <= 500 and amountOFAnimal > 10:
     else:
         choisesFactsAboutCats = []
         print(
-            "We have selected only verified trivia, which is why there are fewer of them.")
+            "We have selected only verified trivias, which is why there are fewer of them.")
         for fact in factsAboutCats:
             status = fact["status"]
             if status["verified"] == True:
