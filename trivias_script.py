@@ -14,7 +14,7 @@ params = {
 
 r = requests.get("https://cat-fact.herokuapp.com/facts/random", params)
 
-if amountOfTrivias <= 500 and amountOFAnimal > 10:
+if amountOfTrivias <= 500 and amountOfTrivias > 10:
     try:
         factsAboutCats = r.json()
     except json.decoder.JSONDecodeError:
