@@ -2,19 +2,19 @@ import requests
 import json
 
 typeOfAnimal = input(
-    "Enter the name of the animal you are interested in (cat or dog): ")
-amountOFAnimal = int(
-    input("Enter the number of trivia you want to see (min. 11, max. 500): "))
+    "Enter the type of the animal you are interested in (cat or dog): ")
+amountOfTrivias = int(
+    input("Enter the amount of trivias you want to see (min. 11, max. 500): "))
 
 
 params = {
     "animal_type": typeOfAnimal,
-    "amount": amountOFAnimal,
+    "amount": amountOfTrivias,
 }
 
 r = requests.get("https://cat-fact.herokuapp.com/facts/random", params)
 
-if amountOFAnimal <= 500 and amountOFAnimal > 10:
+if amountOfTrivias <= 500 and amountOFAnimal > 10:
     try:
         factsAboutCats = r.json()
     except json.decoder.JSONDecodeError:
